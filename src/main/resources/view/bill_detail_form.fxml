@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="758.0" prefWidth="1206.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BillDetailFormController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1206.0" opacity="0.92">
+         <image>
+            <Image url="@../icons-and-images/billsDetails.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="508.0" layoutY="14.0" prefHeight="55.0" prefWidth="190.0" text="Bill Details" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Line endX="80.0" layoutX="614.0" layoutY="69.0" startX="-107.0" stroke="WHITE" strokeWidth="5.0" />
+      <ImageView fitHeight="97.0" fitWidth="93.0" layoutX="710.0" layoutY="18.0">
+         <image>
+            <Image url="@../icons-and-images/billsDetails1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="43.0" layoutY="137.0" prefHeight="39.0" prefWidth="72.0" text="Bill ID" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="97.0" fitWidth="93.0" layoutX="398.0" layoutY="18.0">
+         <image>
+            <Image url="@../icons-and-images/billsDetails2.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtId" layoutX="141.0" layoutY="137.0" onAction="#txtSearchOnAction" onKeyReleased="#txtBillIDOnKeyReleased" prefHeight="39.0" prefWidth="257.0" promptText="Input Bill ID &amp; Press Enter to Search">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtMedicineId" layoutX="141.0" layoutY="189.0" prefHeight="39.0" prefWidth="257.0" promptText="Medicine ID">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtMedicineQty" layoutX="141.0" layoutY="240.0" prefHeight="39.0" prefWidth="257.0" promptText="Medicine QTY">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtMedicinePrice" layoutX="141.0" layoutY="293.0" prefHeight="39.0" prefWidth="257.0" promptText="Medicine Price">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="128.0" fitWidth="113.0" layoutX="23.0" layoutY="189.0">
+         <image>
+            <Image url="@../icons-and-images/billsDetails3.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblBillDetails" layoutX="456.0" layoutY="137.0" prefHeight="517.0" prefWidth="602.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="125.0" text="Bill ID" />
+          <TableColumn fx:id="colMedicineId" prefWidth="144.0" text="Medicine ID" />
+            <TableColumn fx:id="colMedicineQty" prefWidth="144.0" text="Medicine QTY" />
+            <TableColumn fx:id="colMedicinePrice" prefWidth="188.0" text="Medicine Price" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="126.0" layoutY="396.0" onAction="#btnClearOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #00b894;" text="Clear" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="139.0" layoutY="409.0">
+         <image>
+            <Image url="@../icons-and-images/clear.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="126.0" layoutY="483.0" onAction="#btnDeleteOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #d63031;" text="Delete" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="134.0" layoutY="496.0">
+         <image>
+            <Image url="@../icons-and-images/delete.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="1031.0" layoutY="668.0" onAction="#btnBackOnAction" prefHeight="68.0" prefWidth="145.0" style="-fx-background-color: #ffeaa7;" text="    Back" textFill="#757272">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="1047.0" layoutY="687.0">
+         <image>
+            <Image url="@../icons-and-images/back.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="91.0" layoutY="603.0" onAction="#btnPrintReportOnAction" prefHeight="51.0" prefWidth="257.0" style="-fx-background-color: #ffeaa7;" text="         Print Report" textAlignment="RIGHT" textFill="#757272">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView layoutX="122.0" layoutY="609.0">
+         <image>
+            <Image url="@../icons-and-images/printReportIcon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

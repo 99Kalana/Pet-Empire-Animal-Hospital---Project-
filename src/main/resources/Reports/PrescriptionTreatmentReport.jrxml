@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PrescriptionTreatmentReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6a5783f8-39ab-41d5-b2f4-e34f6acb4d19">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (13)"/>
+	<parameter name="Date" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM  pet_empire_animal_hospital.prescription_treatment]]>
+	</queryString>
+	<field name="p_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="p_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="p_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prescription_treatment"/>
+	</field>
+	<field name="t_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="t_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="t_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prescription_treatment"/>
+	</field>
+	<field name="treatment_price" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="treatment_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="treatment_price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prescription_treatment"/>
+	</field>
+	<field name="pt_date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="pt_date"/>
+		<property name="com.jaspersoft.studio.field.label" value="pt_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prescription_treatment"/>
+	</field>
+	<field name="pt_time" class="java.sql.Time">
+		<property name="com.jaspersoft.studio.field.name" value="pt_time"/>
+		<property name="com.jaspersoft.studio.field.label" value="pt_time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prescription_treatment"/>
+	</field>
+	<group name="p_id">
+		<groupExpression><![CDATA[$F{p_id}]]></groupExpression>
+	</group>
+	<group name="t_id">
+		<groupExpression><![CDATA[$F{t_id}]]></groupExpression>
+	</group>
+	<group name="treatment_price">
+		<groupExpression><![CDATA[$F{treatment_price}]]></groupExpression>
+	</group>
+	<group name="pt_date">
+		<groupExpression><![CDATA[$F{pt_date}]]></groupExpression>
+	</group>
+	<group name="pt_time">
+		<groupExpression><![CDATA[$F{pt_time}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="0" width="571" height="79" uuid="2f859da4-ed1a-423c-9020-839cbee45c3f"/>
+				<box>
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Pets Empire Animal Hospital]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="40" width="280" height="30" uuid="bdad78ac-502d-428e-9fc1-61c04c1022b0"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Prescription Treatment Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="100" height="79" uuid="a34d8a94-e004-4383-896f-44a010626aca"/>
+				<imageExpression><![CDATA["C:/Users/Karl/Downloads/Jasper Reports Image Store/reportImg.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="0" width="136" height="20" uuid="5264cbc3-8c0f-4305-a7eb-eadc76736619"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Report Generated Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="125" y="0" width="85" height="20" uuid="b0fc7173-7b10-4612-b182-ff5d6aa7ff4a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="31" width="100" height="30" uuid="bef94ded-66a3-4649-a1b2-0042fbe1574f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a573dcf1-2cc3-46b4-8b84-1949c8605e8d"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Prescription ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="31" width="100" height="30" uuid="d824d997-8113-4449-9590-4c96f3ecb168">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c12bb4e5-311b-426b-b87c-a96e8f943345"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Treatment ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="31" width="102" height="30" uuid="49ad6a94-4e94-4408-926b-dcb30328365a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="375a6413-6d15-4007-aa8e-9738e5aa1a5f"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Treatment Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="31" width="100" height="30" uuid="4d2790d1-98c7-43bb-8386-82453a03de7e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="72d3070a-4002-4b14-b77a-6b4414e6c952"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Prescription Treatment Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="31" width="100" height="30" uuid="334b3fca-2294-46c4-a1b1-84ce9690c22e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1611aed1-b944-42bc-a177-9bcf2a35270f"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Prescription Treatment Time]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="25" y="0" width="100" height="30" uuid="f499b3d2-2ea5-414b-9727-42677f8b935e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a573dcf1-2cc3-46b4-8b84-1949c8605e8d"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{p_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="0" width="100" height="30" uuid="d0889ee5-3c7c-4765-89c0-1f00493a2367">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c12bb4e5-311b-426b-b87c-a96e8f943345"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{t_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="225" y="0" width="102" height="30" uuid="8eb604f1-5b2f-4685-85c7-b382ab3e8b82">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="375a6413-6d15-4007-aa8e-9738e5aa1a5f"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{treatment_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="0" width="100" height="30" uuid="ce5a53be-4f43-4039-b730-49e6527eb1af">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="72d3070a-4002-4b14-b77a-6b4414e6c952"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("yyyy-MM-dd").format($F{pt_date})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="0" width="100" height="30" uuid="c68fb31b-5a46-4eef-8bdd-545e38f04bb9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1611aed1-b944-42bc-a177-9bcf2a35270f"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("HH:mm").format($F{pt_time})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="28" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="62" splitType="Stretch">
+			<image>
+				<reportElement x="249" y="6" width="50" height="50" uuid="526afcb9-9bfc-4bfa-9865-c765df8a91f6"/>
+				<imageExpression><![CDATA["C:/Users/Karl/Downloads/Jasper Reports Image Store/reportImg02.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

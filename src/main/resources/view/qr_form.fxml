@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootQr" prefHeight="758.0" prefWidth="1206.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.QrFormController">
+    <children>
+      <ImageView fitHeight="758.0" fitWidth="1206.0" opacity="0.93">
+         <image>
+            <Image url="@../icons-and-images/QRbackground.jpg" />
+         </image>
+      </ImageView>
+        <AnchorPane fx:id="paneQr" layoutX="165.0" layoutY="146.0" opacity="0.93" prefHeight="264.0" prefWidth="298.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+                <Label fx:id="lblQR" prefHeight="264.0" prefWidth="298.0" style="-fx-background-color: #bdc3c7;" />
+         </children>
+        </AnchorPane>
+        <Label layoutX="394.0" layoutY="14.0" prefHeight="36.0" prefWidth="418.0" text="           QR Helper" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <Line endX="200.0" layoutX="604.0" layoutY="67.0" startX="-202.0" stroke="WHITE" strokeWidth="3.0" />
+        <Label layoutX="521.0" layoutY="153.0" prefHeight="36.0" prefWidth="103.0" text="Client ID" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="522.0" layoutY="206.0" prefHeight="36.0" prefWidth="76.0" text="Pet ID" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="521.0" layoutY="259.0" prefHeight="36.0" prefWidth="147.0" text="Client Name" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="521.0" layoutY="311.0" prefHeight="36.0" prefWidth="147.0" text="Client Email" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="522.0" layoutY="367.0" prefHeight="36.0" prefWidth="166.0" text="Client Contact" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txtClientContact" layoutX="688.0" layoutY="366.0" onKeyReleased="#txtClientContactOnKeyReleased" opacity="0.8" prefHeight="39.0" prefWidth="366.0" promptText="Format '0737033369'">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtClientEmail" layoutX="688.0" layoutY="310.0" onKeyReleased="#txtEmailOnKeyReleased" opacity="0.8" prefHeight="39.0" prefWidth="366.0" promptText="Format 'abc@gmail.com'">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtClientName" layoutX="688.0" layoutY="258.0" opacity="0.8" prefHeight="39.0" prefWidth="366.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtPetId" layoutX="688.0" layoutY="205.0" onKeyReleased="#txtPetIDOnKeyReleased" opacity="0.8" prefHeight="39.0" prefWidth="366.0" promptText="Format 'P001'">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtClientId" layoutX="688.0" layoutY="152.0" onAction="#txtSearchOnAction" onKeyReleased="#txtClientIDOnKeyReleased" opacity="0.8" prefHeight="39.0" prefWidth="366.0" promptText="Format 'C001' and Press Enter for Search ">
+         <font>
+            <Font size="18.0" />
+         </font>
+        </TextField>
+        <JFXButton layoutX="265.0" layoutY="515.0" onAction="#btnBrowseQrOnAction" prefHeight="72.0" prefWidth="166.0" style="-fx-background-color: #e67e22;" text="Browse QR" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="448.0" layoutY="515.0" onAction="#btnReadQrOnAction" prefHeight="72.0" prefWidth="166.0" style="-fx-background-color: #e67e22;" text="Read QR" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="812.0" layoutY="515.0" onAction="#btnGenerateQrOnAction" prefHeight="72.0" prefWidth="166.0" style="-fx-background-color: #e67e22;" text="Generate QR" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <JFXButton layoutX="631.0" layoutY="515.0" onAction="#btnClearOnAction" prefHeight="72.0" prefWidth="166.0" style="-fx-background-color: #e67e22;" text="Clear" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+      <ImageView fitHeight="72.0" fitWidth="76.0" layoutX="310.0" layoutY="5.0">
+         <image>
+            <Image url="@../icons-and-images/QRIcon1.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

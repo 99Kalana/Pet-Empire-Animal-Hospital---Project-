@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="758.0" prefWidth="1206.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AppointmentFormController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1206.0">
+         <image>
+            <Image url="@../icons-and-images/defaultBackgroundnew.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="425.0" layoutY="17.0" prefHeight="55.0" prefWidth="356.0" text="Appoinment Manage" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Line endX="167.0" layoutX="614.0" layoutY="72.0" startX="-189.0" stroke="WHITE" strokeWidth="5.0" />
+      <ImageView fitHeight="65.0" fitWidth="54.0" layoutX="361.0" layoutY="12.0">
+         <image>
+            <Image url="@../icons-and-images/appoinmentIcon2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="26.0" layoutY="100.0" prefHeight="39.0" prefWidth="184.0" text="Appointment ID" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="306.0" layoutY="100.0" prefHeight="39.0" prefWidth="105.0" text="Client ID" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="583.0" layoutY="100.0" prefHeight="39.0" prefWidth="197.0" text="Appointment No." textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="855.0" layoutY="100.0" prefHeight="39.0" prefWidth="217.0" text="Appointment Date" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="188.0" prefHeight="39.0" prefWidth="217.0" text="Appointment Time" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtId" layoutX="26.0" layoutY="139.0" onAction="#txtSearchOnAction" onKeyReleased="#txtAppointmentIDOnKeyReleased" prefHeight="39.0" prefWidth="257.0" promptText="Format 'A001'">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtClientId" layoutX="306.0" layoutY="139.0" onKeyReleased="#txtClientIDOnKeyReleased" prefHeight="39.0" prefWidth="257.0" promptText="Format 'C001' ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtNo" layoutX="583.0" layoutY="139.0" onKeyReleased="#txtAppointmentNoOnKeyReleased" prefHeight="39.0" prefWidth="257.0" promptText="Format 'Normal Numbering 1,2..' ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtDate" layoutX="855.0" layoutY="139.0" onKeyReleased="#txtAppointmentDateOnKeyReleased" prefHeight="39.0" prefWidth="257.0" promptText="Format 'YYYY-MM-DD'">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtTime" layoutX="26.0" layoutY="227.0" onKeyReleased="#txtAppointmentTimeOnKeyReleased" prefHeight="39.0" prefWidth="257.0" promptText="Format '00:00' / Hours-Minutes">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TableView fx:id="tblAppointment" layoutX="26.0" layoutY="285.0" prefHeight="447.0" prefWidth="854.0">
+         <columns>
+            <TableColumn fx:id="colApId" prefWidth="120.0" text="Appoinment ID" />
+            <TableColumn fx:id="colCId" prefWidth="167.0" text="Client ID" />
+            <TableColumn fx:id="colNo" prefWidth="153.0" text="Appointment No." />
+            <TableColumn fx:id="colDate" prefWidth="211.0" text="Appointment Date" />
+            <TableColumn fx:id="colTime" prefWidth="202.0" text="Appointment Time" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="342.0" layoutY="208.0" onAction="#btnSaveOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #0984e3;" text="Save" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="358.0" layoutY="221.0">
+         <image>
+            <Image url="@../icons-and-images/save.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="547.0" layoutY="209.0" onAction="#btnUpdateOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #e17055;" text="Update" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="556.0" layoutY="222.0">
+         <image>
+            <Image url="@../icons-and-images/update.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="752.0" layoutY="208.0" onAction="#btnClearOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #00b894;" text="Clear" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="765.0" layoutY="221.0">
+         <image>
+            <Image url="@../icons-and-images/clear.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="964.0" layoutY="208.0" onAction="#btnDeleteOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #d63031;" text="Delete" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="972.0" layoutY="221.0">
+         <image>
+            <Image url="@../icons-and-images/delete.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="919.0" layoutY="483.0" onAction="#btnPrintReportOnAction" prefHeight="51.0" prefWidth="257.0" style="-fx-background-color: #ffeaa7;" text="         Print Report" textAlignment="RIGHT" textFill="#757272">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView layoutX="950.0" layoutY="489.0">
+         <image>
+            <Image url="@../icons-and-images/printReportIcon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

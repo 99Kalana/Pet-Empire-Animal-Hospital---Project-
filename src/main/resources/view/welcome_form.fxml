@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNodeO" prefHeight="758.0" prefWidth="1206.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.WelcomeFormController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1206.0" opacity="0.93">
+         <image>
+            <Image url="@../icons-and-images/welcomeBackgroundNew1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="41.0" layoutY="14.0" prefHeight="70.0" prefWidth="227.0" text="Welcome " textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="268.0" layoutY="14.0" prefHeight="70.0" prefWidth="60.0" text="to " textFill="#fcf6f6">
+         <font>
+            <Font name="System Bold Italic" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="76.0" prefHeight="48.0" prefWidth="647.0" text="Pet Empire Animal Hospital " textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="677.0" layoutY="68.0" prefHeight="86.0" prefWidth="483.0" text="Management System" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold Italic" size="48.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="786.0" layoutY="572.0" onAction="#btnWelcomeOnAction" prefHeight="102.0" prefWidth="340.0" style="-fx-background-color: #0984e3;" text="Get Started" textFill="#f5f2f2">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="78.0" fitWidth="67.0" layoutX="804.0" layoutY="584.0">
+         <image>
+            <Image url="@../icons-and-images/welcome1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="74.0" layoutX="1040.0" layoutY="592.0">
+         <image>
+            <Image url="@../icons-and-images/welcome2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

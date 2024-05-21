@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="homeNode" prefHeight="758.0" prefWidth="1420.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.HomePageFormController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1420.0">
+         <image>
+            <Image url="@../icons-and-images/defaultBackgroundnew.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="viewNode" layoutX="214.0" prefHeight="758.0" prefWidth="1206.0" />
+      <JFXButton layoutX="31.0" layoutY="698.0" onAction="#btnLogOutOnAction" prefHeight="51.0" prefWidth="153.0" style="-fx-background-color: #ff9f43;" text="   Logout" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="32.0" fitWidth="37.0" layoutX="39.0" layoutY="708.0">
+         <image>
+            <Image url="@../icons-and-images/logout.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnDashboard" layoutY="14.0" onAction="#btnDashboardOnAction" prefHeight="43.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="      Dashboard" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="32.0" fitWidth="37.0" layoutX="12.0" layoutY="24.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon1.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnPet" layoutY="66.0" onAction="#btnPetFormOnAction" prefHeight="34.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="                     Pet" textAlignment="RIGHT" textFill="#f8f7f7">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnClient" layoutY="118.0" onAction="#btnClientFormOnAction" prefHeight="29.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="                 Client" textFill="#f8f7f7">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAppointment" layoutY="170.0" onAction="#btnAppointmentFormOnAction" prefHeight="35.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="      Appoinment" textAlignment="RIGHT" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnVeterinarian" layoutY="222.0" onAction="#btnVeterinarianFormOnAction" prefHeight="37.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="      Veterinarian" textAlignment="RIGHT" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnPrescription" layoutY="274.0" onAction="#btnPrescriptionFormOnAction" prefHeight="24.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="      Prescription" textAlignment="RIGHT" textFill="#f8f6f6">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnTreatments" layoutY="326.0" onAction="#btnTreatmentsFormOnAction" prefHeight="39.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="       Treatments" textAlignment="RIGHT" textFill="#f8f7f7">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnPresTreat" layoutY="378.0" onAction="#btnPrescriptionTreatmentFormOnAction" prefHeight="35.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="        Pres.Treat." textAlignment="RIGHT" textFill="#fcfafa">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnPresMed" layoutY="430.0" onAction="#btnPrescriptionMedicineFormOnAction" prefHeight="32.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="         Pres.Med." textAlignment="RIGHT" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSupplier" layoutY="482.0" onAction="#btnSupplierFormOnAction" prefHeight="32.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="            Supplier" textAlignment="RIGHT" textFill="#f5f3f3">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnMedicine" layoutY="534.0" onAction="#btnMedicineFormOnAction" prefHeight="21.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="          Medicine" textAlignment="RIGHT" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnMedSup" layoutY="586.0" onAction="#btnMedicineSupplierFormOnAction" prefHeight="37.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="         Med.Sup." textAlignment="RIGHT" textFill="#f8f6f6">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnBills" layoutY="638.0" onAction="#btnBillFormOnAction" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: #0984e3;" text="                  Bills" textAlignment="RIGHT" textFill="#f5f3f3">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="14.0" layoutY="120.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="9.0" layoutY="172.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="9.0" layoutY="224.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="9.0" layoutY="276.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon6.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="9.0" layoutY="328.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon7.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="9.0" layoutY="380.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon8.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="9.0" layoutY="432.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon9.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="9.0" layoutY="484.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon10.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="9.0" layoutY="536.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon11.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="48.0" layoutX="9.0" layoutY="591.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon12.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="14.0" layoutY="640.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon13.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="14.0" layoutY="68.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="758.0" prefWidth="1206.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1206.0" opacity="0.93">
+         <image>
+            <Image url="@../icons-and-images/dashboardBackground.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="179.0" layoutY="108.0" prefHeight="80.0" prefWidth="733.0" text="Pet Empire Animal Hospital  " textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="54.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="123.0" layoutY="217.0" prefHeight="70.0" prefWidth="213.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="122.0" text="Pet Count:" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPetCount" layoutX="136.0" layoutY="14.0" prefHeight="43.0" prefWidth="67.0" text="Label" textFill="#fffefe">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="123.0" layoutY="287.0" prefHeight="70.0" prefWidth="186.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="148.0" text="Client Count:" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblClientCount" layoutX="162.0" layoutY="14.0" prefHeight="43.0" prefWidth="67.0" text="Label" textFill="#fffefe">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="115.0" layoutY="368.0" prefHeight="70.0" prefWidth="266.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="196.0" text="Appointment Co:" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAppointmentCount" layoutX="210.0" layoutY="14.0" prefHeight="43.0" prefWidth="67.0" text="Label" textFill="#fffefe">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="116.0" layoutY="450.0" prefHeight="70.0" prefWidth="292.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="224.0" text="Veterinarian Count:" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblVeterinarianCount" layoutX="238.0" layoutY="14.0" prefHeight="43.0" prefWidth="67.0" text="Label" textFill="#fffefe">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="115.0" layoutY="538.0" prefHeight="70.0" prefWidth="224.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="43.0" prefWidth="178.0" text="Supplier Count:" textFill="#fffbfb">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSupplierCount" layoutX="192.0" layoutY="14.0" prefHeight="43.0" prefWidth="67.0" text="Label" textFill="#fffefe">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="343.0" layoutY="28.0" prefHeight="80.0" prefWidth="405.0" text="Welcome to the" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="54.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="956.0" layoutY="655.0" onAction="#btnQrPageOnAction" prefHeight="70.0" prefWidth="205.0" style="-fx-background-color: #e67e22;" text="      QR Helper" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="56.0" fitWidth="59.0" layoutX="968.0" layoutY="662.0">
+         <image>
+            <Image url="@../icons-and-images/QRIcon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="967.0" layoutY="24.0" prefHeight="27.0" prefWidth="122.0" text="Logged in As:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="62.0" fitWidth="67.0" layoutX="1078.0" layoutY="37.0">
+         <image>
+            <Image url="@../icons-and-images/userIcon.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="962.0" layoutY="55.0" prefHeight="43.0" prefWidth="131.0">
+         <children>
+            <Label fx:id="lblUsername" layoutX="21.0" layoutY="4.0" prefHeight="35.0" prefWidth="90.0" text="Label" textAlignment="JUSTIFY" textFill="#f2efef">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView layoutX="68.0" layoutY="228.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="68.0" layoutY="298.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="60.0" layoutY="379.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon4.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="60.0" layoutY="461.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon5.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="60.0" layoutY="549.0">
+         <image>
+            <Image url="@../icons-and-images/dashboardIcon10.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

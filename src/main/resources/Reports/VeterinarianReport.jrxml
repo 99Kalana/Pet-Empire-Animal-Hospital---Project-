@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="VeterinarianReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="76f0ed41-6bc3-4195-84a5-10fff9280e75">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (16)"/>
+	<parameter name="Date" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM  pet_empire_animal_hospital.veterinarian]]>
+	</queryString>
+	<field name="veterinarian_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="veterinarian_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="veterinarian_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="veterinarian"/>
+	</field>
+	<field name="veterinarian_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="veterinarian_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="veterinarian_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="veterinarian"/>
+	</field>
+	<field name="veterinarian_contact_no" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="veterinarian_contact_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="veterinarian_contact_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="veterinarian"/>
+	</field>
+	<field name="veterinarian_email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="veterinarian_email"/>
+		<property name="com.jaspersoft.studio.field.label" value="veterinarian_email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="veterinarian"/>
+	</field>
+	<group name="veterinarian_id">
+		<groupExpression><![CDATA[$F{veterinarian_id}]]></groupExpression>
+	</group>
+	<group name="veterinarian_name">
+		<groupExpression><![CDATA[$F{veterinarian_name}]]></groupExpression>
+	</group>
+	<group name="veterinarian_contact_no">
+		<groupExpression><![CDATA[$F{veterinarian_contact_no}]]></groupExpression>
+	</group>
+	<group name="veterinarian_email">
+		<groupExpression><![CDATA[$F{veterinarian_email}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="0" width="571" height="79" uuid="15556b6e-583d-4656-8ec0-190a029c9066"/>
+				<box>
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Pets Empire Animal Hospital]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="159" y="40" width="236" height="30" uuid="d586b396-253b-4ac9-b583-6ecd24652e7a"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Veterinarian's Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="90" height="79" uuid="844b4e1f-8731-432b-859a-ea4ead545ee0"/>
+				<imageExpression><![CDATA["C:/Users/Karl/Downloads/Jasper Reports Image Store/reportImg.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="24" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="0" width="136" height="20" uuid="2cb5cc79-0eda-41e9-bb69-6e0aa20e97d6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Report Generated Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="125" y="0" width="85" height="20" uuid="89de741e-f1cc-462c-afc8-76f32b0b8052"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="60" y="31" width="100" height="30" uuid="db123a45-8247-4652-9fc0-939148f4a78b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a8df368-6c72-44a1-9f38-9a9ebc414f1b"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Veterinarian ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="31" width="100" height="30" uuid="538f58fd-ec28-49dc-8845-9941b4729d42">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="007670cc-238f-494f-85ce-eef52dc48954"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Veterinarian Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="31" width="100" height="30" uuid="407de9f3-0734-4bfa-8d37-4ee10ad76038">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fbb10a4c-82f5-4f55-9d63-ddfbc1f0f527"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Veterinarian Contact No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="31" width="110" height="30" uuid="3f6820f5-2b5c-4ae3-9326-c7f624d3698f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6c59e55-66e6-430e-b359-a60ca19bb68d"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Veterinarian Email]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="60" y="0" width="100" height="30" uuid="4cbd742d-44e1-49cd-8215-32b1afca3209">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a8df368-6c72-44a1-9f38-9a9ebc414f1b"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{veterinarian_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="100" height="30" uuid="fdbf8a88-e12a-4dc1-a279-4fe8be86abb7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="007670cc-238f-494f-85ce-eef52dc48954"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{veterinarian_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="0" width="100" height="30" uuid="859f0f45-f4a6-40cc-a950-b38f8cc62faf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fbb10a4c-82f5-4f55-9d63-ddfbc1f0f527"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{veterinarian_contact_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="110" height="30" uuid="3ba8091e-d64e-4cdb-97d1-69c68c1966f0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a6c59e55-66e6-430e-b359-a60ca19bb68d"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{veterinarian_email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="17" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="63" splitType="Stretch">
+			<image>
+				<reportElement x="252" y="6" width="50" height="50" uuid="a06db586-1f98-4699-8ad0-51ecae5bdc8f"/>
+				<imageExpression><![CDATA["C:/Users/Karl/Downloads/Jasper Reports Image Store/reportImg02.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="667.0" prefWidth="533.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="167.0" layoutY="14.0">
+         <image>
+            <Image url="@../icons-and-images/pets.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="88.0" layoutY="164.0" prefHeight="35.0" prefWidth="382.0" text="Pets Empire Animal Hospital Login">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Line endX="170.0" layoutX="279.0" layoutY="206.0" startX="-187.0" />
+      <TextField fx:id="txtUserId" layoutX="55.0" layoutY="276.0" onKeyReleased="#txtUserIDOnKeyReleased" prefHeight="45.0" prefWidth="431.0" promptText="Username, Format should be 'U001'">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Label layoutX="55.0" layoutY="231.0" prefHeight="45.0" prefWidth="146.0" text="User ID">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="334.0" prefHeight="45.0" prefWidth="146.0" text="Password">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="167.0" layoutY="475.0" onAction="#btnLoginOnAction" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #0984e3;" text="Login" textFill="#fcf5f5">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="101.0" layoutY="533.0" prefHeight="45.0" prefWidth="187.0" text="Don't have an account?">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="290.0" layoutY="533.0" onAction="#linkRegisterOnAction" prefHeight="45.0" prefWidth="155.0" text="Register on here! ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <PasswordField fx:id="txtPassword" layoutX="55.0" layoutY="379.0" prefHeight="45.0" prefWidth="431.0" promptText="Password">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+      <Hyperlink layoutX="292.0" layoutY="424.0" onAction="#linkForgotPasswordOnAction" text="Forgot your password?">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Hyperlink>
+      <JFXButton layoutX="404.0" layoutY="604.0" onAction="#btnExitOnAction" prefHeight="49.0" prefWidth="115.0" style="-fx-background-color: #ff7675;" text="Exit" textFill="#fcfafa">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

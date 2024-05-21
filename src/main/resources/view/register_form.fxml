@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="683.0" prefWidth="503.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegisterFormController">
+   <children>
+      <ImageView fitHeight="152.0" fitWidth="465.0" layoutX="19.0" layoutY="14.0">
+         <image>
+            <Image url="@../icons-and-images/pets2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="142.0" layoutY="14.0" prefHeight="49.0" prefWidth="220.0" text="Register an account!">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Line endX="102.0" layoutX="252.0" layoutY="63.0" startX="-110.0" />
+      <Label layoutX="41.0" layoutY="190.0" prefHeight="49.0" prefWidth="115.0" text="User ID">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="293.0" prefHeight="49.0" prefWidth="115.0" text="Name">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="396.0" prefHeight="49.0" prefWidth="115.0" text="Password">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserId" layoutX="41.0" layoutY="246.0" onKeyReleased="#txtUserIDOnKeyReleased" prefHeight="38.0" prefWidth="431.0" promptText="Input your user ID, The Format should be 'U001'">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtName" layoutX="41.0" layoutY="349.0" prefHeight="38.0" prefWidth="431.0" promptText="Input your name here">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtPassword" layoutX="41.0" layoutY="453.0" prefHeight="39.0" prefWidth="431.0" promptText="Input your password here">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <JFXButton layoutX="133.0" layoutY="528.0" onAction="#btnRegisterOnAction" prefHeight="39.0" prefWidth="231.0" style="-fx-background-color: #0984e3;" text="Register Now" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="369.0" layoutY="620.0" onAction="#btnBackOnAction" prefHeight="49.0" prefWidth="115.0" style="-fx-background-color: #ff7675;" text="Back" textFill="#fcfafa">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

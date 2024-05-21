@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="758.0" prefWidth="1206.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ClientFormController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1206.0" opacity="0.93">
+         <image>
+            <Image url="@../icons-and-images/defaultBackgroundnew.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="479.0" layoutY="28.0" prefHeight="55.0" prefWidth="249.0" text="Client Manage" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Line endX="113.0" layoutX="615.0" layoutY="85.0" startX="-136.0" stroke="WHITE" strokeWidth="5.0" />
+      <ImageView fitHeight="84.0" fitWidth="76.0" layoutX="746.0" layoutY="15.0">
+         <image>
+            <Image url="@../icons-and-images/client1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="28.0" layoutY="114.0" prefHeight="39.0" prefWidth="145.0" text="Client ID" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="306.0" layoutY="114.0" prefHeight="39.0" prefWidth="145.0" text="Pet ID" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtId" layoutX="27.0" layoutY="165.0" onAction="#txtSearchOnAction" onKeyReleased="#txtClientIDOnKeyReleased" prefHeight="39.0" prefWidth="257.0" promptText="Format 'C001'">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtPetId" layoutX="306.0" layoutY="165.0" onKeyReleased="#txtPetIDOnKeyReleased" prefHeight="39.0" prefWidth="257.0" promptText="Format 'P001'">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtName" layoutX="588.0" layoutY="165.0" prefHeight="39.0" prefWidth="257.0" />
+      <Label layoutX="588.0" layoutY="114.0" prefHeight="39.0" prefWidth="158.0" text="Client Name" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="864.0" layoutY="114.0" prefHeight="39.0" prefWidth="221.0" text="Client Address" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="213.0" prefHeight="39.0" prefWidth="152.0" text="Client Email" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="372.0" layoutY="213.0" prefHeight="39.0" prefWidth="212.0" text="Client Contact No." textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddress" layoutX="861.0" layoutY="165.0" prefHeight="39.0" prefWidth="325.0" />
+      <TextField fx:id="txtEmail" layoutX="28.0" layoutY="252.0" onKeyReleased="#txtEmailOnKeyReleased" prefHeight="39.0" prefWidth="325.0" promptText="Format 'abc@gmail.com'">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtContactNo" layoutX="372.0" layoutY="252.0" onKeyReleased="#txtContactNoOnKeyReleased" prefHeight="39.0" prefWidth="325.0" promptText="Format '0711018969'">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TableView fx:id="tblClient" layoutX="27.0" layoutY="316.0" prefHeight="407.0" prefWidth="902.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="78.0" text="Client ID" />
+            <TableColumn fx:id="colPetId" prefWidth="81.0" text="Pet ID" />
+            <TableColumn fx:id="colName" prefWidth="152.0" text="Client Name" />
+            <TableColumn fx:id="colAddress" prefWidth="218.0" text="Client Address" />
+            <TableColumn fx:id="colEmail" prefWidth="214.0" text="Client Email" />
+            <TableColumn fx:id="colContactNo" prefWidth="158.0" text="Client Contatct No." />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="954.0" layoutY="359.0" onAction="#btnSaveOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #0984e3;" text="Save" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="970.0" layoutY="372.0">
+         <image>
+            <Image url="@../icons-and-images/save.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="954.0" layoutY="447.0" onAction="#btnUpdateOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #e17055;" text="Update" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="963.0" layoutY="460.0">
+         <image>
+            <Image url="@../icons-and-images/update.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="954.0" layoutY="537.0" onAction="#btnClearOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #00b894;" text="Clear" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="967.0" layoutY="550.0">
+         <image>
+            <Image url="@../icons-and-images/clear.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="954.0" layoutY="626.0" onAction="#btnDeleteOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #d63031;" text="Delete" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="962.0" layoutY="639.0">
+         <image>
+            <Image url="@../icons-and-images/delete.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="826.0" layoutY="246.0" onAction="#btnPrintReportOnAction" prefHeight="51.0" prefWidth="257.0" style="-fx-background-color: #ffeaa7;" text="         Print Report" textAlignment="RIGHT" textFill="#757272">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView layoutX="857.0" layoutY="252.0">
+         <image>
+            <Image url="@../icons-and-images/printReportIcon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

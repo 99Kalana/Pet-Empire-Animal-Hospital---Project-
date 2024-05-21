@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PrescriptionReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eae73bf6-1017-4c59-adfa-c9c39631de77">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (11)"/>
+	<parameter name="Date" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM  pet_empire_animal_hospital.prescription]]>
+	</queryString>
+	<field name="p_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="p_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="p_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prescription"/>
+	</field>
+	<field name="p_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="p_type"/>
+		<property name="com.jaspersoft.studio.field.label" value="p_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prescription"/>
+	</field>
+	<field name="veterinarian_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="veterinarian_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="veterinarian_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="prescription"/>
+	</field>
+	<group name="p_id">
+		<groupExpression><![CDATA[$F{p_id}]]></groupExpression>
+	</group>
+	<group name="p_type">
+		<groupExpression><![CDATA[$F{p_type}]]></groupExpression>
+	</group>
+	<group name="veterinarian_id">
+		<groupExpression><![CDATA[$F{veterinarian_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="0" width="571" height="79" uuid="57ee1340-2aca-408d-8405-b4c057f3f462"/>
+				<box>
+					<pen lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Pets Empire Animal Hospital]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="40" width="231" height="30" uuid="a9c95e56-24c6-4656-a57b-41ffcf623d65"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Prescription's Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="100" height="79" uuid="712a5280-5b1e-46b1-b4db-48c681edf7bb"/>
+				<imageExpression><![CDATA["C:/Users/Karl/Downloads/Jasper Reports Image Store/reportImg.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="24" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="0" width="136" height="20" uuid="41d3032f-aaf6-471e-8abe-dd531b864280"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Report Generated Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="125" y="0" width="85" height="20" uuid="e6217946-ea34-4162-b3ef-c3e3d46d879a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="127" y="31" width="100" height="30" uuid="b9bbc69b-724f-4095-bab0-c1b08e544a74">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84f83c47-27ac-482d-a1ae-561bbeb3c465"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Prescription ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="227" y="31" width="100" height="30" uuid="9ae22cd2-47be-499f-88af-c2082759410d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="593b7c7e-203e-417a-a914-b94a254276bc"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Prescription Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="31" width="100" height="30" uuid="69a59cb1-ac91-4831-94ee-30c559d68137">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5bd307f6-f2cd-4445-a890-f084704fc2d4"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Veterinarian ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="127" y="0" width="100" height="30" uuid="9b189fe1-8c36-457d-9a07-306cc02a1068">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="84f83c47-27ac-482d-a1ae-561bbeb3c465"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{p_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="0" width="100" height="30" uuid="9e5c64f5-27d9-4f57-8c59-f54f3f8972d1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="593b7c7e-203e-417a-a914-b94a254276bc"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{p_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="0" width="100" height="30" uuid="ea91c97a-811f-421a-a12c-713ca39501f8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5bd307f6-f2cd-4445-a890-f084704fc2d4"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{veterinarian_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="27" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="63" splitType="Stretch">
+			<image>
+				<reportElement x="249" y="6" width="50" height="50" uuid="673ddc24-fe08-48d2-a6f5-da2a1e0e2b83"/>
+				<imageExpression><![CDATA["C:/Users/Karl/Downloads/Jasper Reports Image Store/reportImg02.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

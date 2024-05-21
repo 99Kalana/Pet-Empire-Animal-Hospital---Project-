@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PlaceBill" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3b266a4b-5eb7-4e86-a53b-ef65aea75d7e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (3)"/>
+	<parameter name="TotalPrice" class="java.lang.Integer"/>
+	<parameter name="BillID" class="java.lang.String"/>
+	<parameter name="Date" class="java.lang.String"/>
+	<parameter name="ClientID" class="java.lang.String"/>
+	<parameter name="VeterinarianID" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * 
+FROM pet_empire_animal_hospital.medicine m
+INNER JOIN pet_empire_animal_hospital.bills_details bd ON m.m_id = bd.m_id
+INNER JOIN pet_empire_animal_hospital.bills b ON bd.bill_id = b.bill_id
+WHERE b.bill_id = $P{BillID}
+ORDER BY b.bill_id]]>
+	</queryString>
+	<field name="m_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="m_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="m_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicine"/>
+	</field>
+	<field name="m_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="m_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="m_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicine"/>
+	</field>
+	<field name="m_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="m_type"/>
+		<property name="com.jaspersoft.studio.field.label" value="m_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicine"/>
+	</field>
+	<field name="m_price" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="m_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="m_price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicine"/>
+	</field>
+	<field name="m_description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="m_description"/>
+		<property name="com.jaspersoft.studio.field.label" value="m_description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicine"/>
+	</field>
+	<field name="m_qty_on_hand" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="m_qty_on_hand"/>
+		<property name="com.jaspersoft.studio.field.label" value="m_qty_on_hand"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicine"/>
+	</field>
+	<field name="bill_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="bill_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="bill_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bills_details"/>
+	</field>
+	<field name="COLUMN_8" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="m_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="m_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bills_details"/>
+	</field>
+	<field name="m_qty" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="m_qty"/>
+		<property name="com.jaspersoft.studio.field.label" value="m_qty"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bills_details"/>
+	</field>
+	<field name="COLUMN_10" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="m_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="m_price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bills_details"/>
+	</field>
+	<field name="COLUMN_11" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="bill_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="bill_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bills"/>
+	</field>
+	<field name="client_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="client_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="client_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bills"/>
+	</field>
+	<field name="date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="date"/>
+		<property name="com.jaspersoft.studio.field.label" value="date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="bills"/>
+	</field>
+	<group name="m_id">
+		<groupExpression><![CDATA[$F{m_id}]]></groupExpression>
+	</group>
+	<group name="m_name">
+		<groupExpression><![CDATA[$F{m_name}]]></groupExpression>
+	</group>
+	<group name="m_type">
+		<groupExpression><![CDATA[$F{m_type}]]></groupExpression>
+	</group>
+	<group name="m_price">
+		<groupExpression><![CDATA[$F{m_price}]]></groupExpression>
+	</group>
+	<group name="m_description">
+		<groupExpression><![CDATA[$F{m_description}]]></groupExpression>
+	</group>
+	<group name="m_qty_on_hand">
+		<groupExpression><![CDATA[$F{m_qty_on_hand}]]></groupExpression>
+	</group>
+	<group name="bill_id">
+		<groupExpression><![CDATA[$F{bill_id}]]></groupExpression>
+	</group>
+	<group name="COLUMN_8">
+		<groupExpression><![CDATA[$F{COLUMN_8}]]></groupExpression>
+	</group>
+	<group name="m_qty">
+		<groupExpression><![CDATA[$F{m_qty}]]></groupExpression>
+	</group>
+	<group name="COLUMN_10">
+		<groupExpression><![CDATA[$F{COLUMN_10}]]></groupExpression>
+	</group>
+	<group name="COLUMN_11">
+		<groupExpression><![CDATA[$F{COLUMN_11}]]></groupExpression>
+	</group>
+	<group name="client_id">
+		<groupExpression><![CDATA[$F{client_id}]]></groupExpression>
+	</group>
+	<group name="date">
+		<groupExpression><![CDATA[$F{date}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="85" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="0" width="570" height="80" uuid="4c56ef5c-fc06-4ad3-b6a0-b42186f6eb4b"/>
+				<box>
+					<pen lineWidth="5.0" lineStyle="Dashed"/>
+					<topPen lineWidth="1.0" lineStyle="Dotted"/>
+					<leftPen lineWidth="1.0" lineStyle="Dotted"/>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+					<rightPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Pets Empire Animal Hospital]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="29" width="182" height="20" uuid="f710cf37-45aa-4c4c-8b94-66899a3b36ec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[No:69,Galle Road,Panadura.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-8" y="49" width="330" height="20" uuid="0f9b6d40-1551-427d-aeca-05d1cb81963d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Contact : Mobile(Whatsapp)- 0710700069/ Tel- 0382222609]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="49" width="230" height="20" uuid="d4125afd-97ef-409c-a3e1-0b6d7d181301"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Email: PetsEmpireHospital21@gmail.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="90" y="0" width="40" height="49" uuid="b06c5525-90ee-4643-bb63-461c6a704f0b"/>
+				<imageExpression><![CDATA["C:/Users/Karl/Downloads/Jasper Reports Image Store/reportImg3.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="420" y="0" width="60" height="49" uuid="2b7374ed-3711-4b67-b43f-b17aa8dc5d27"/>
+				<imageExpression><![CDATA["C:/Users/Karl/Downloads/Jasper Reports Image Store/reportImg.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="24" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="0" width="34" height="16" uuid="726da349-aa18-413f-bbb4-60563a8fa053"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Bill Id:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="16" width="34" height="16" uuid="822d1816-694f-40ce-a8ee-4fbbed695f47"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="92" height="16" uuid="cedfa0e0-f832-4566-8b02-fe6b45626aad"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Client ID:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="40" width="110" height="20" uuid="d80bc560-8eb7-4be4-8b4b-62ebf1c01423">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fdb93aef-c5b1-4dda-abcd-e53fd4cf521b"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Medicine Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="40" width="102" height="20" uuid="2edecc63-f437-4d78-b303-3908a8f09b45">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="00e0e27f-a15a-43f8-a887-1b9f718b9ae9"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Medicine Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="40" width="100" height="20" uuid="5936f178-98e5-404d-a3ac-d21c734798ac">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="952a55ae-b942-49d9-bb2a-aa818a00bbaf"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Medicine Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="40" width="98" height="20" uuid="4a96199d-8f9d-457f-a8d6-f7cb4efffa58">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="39dec0fd-22b3-4167-b219-e27c5784d209"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Bill QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="40" width="100" height="20" uuid="431c04cb-f43c-4c1c-bc49-533da0726be5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d260ba44-dba2-4efa-bcf9-48ccd786af8e"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Medicine ID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="24" y="0" width="66" height="16" uuid="c3067f69-37cc-4343-8592-b8d595e9bec5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BillID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="16" width="100" height="16" uuid="5647b8c5-7cc3-490c-983c-3f2351125953"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="0" width="110" height="16" uuid="626b1e50-a4c5-45d8-a024-097f7d89137a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ClientID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="350" y="16" width="92" height="16" uuid="26184904-a8be-45d1-baae-3c296ceb557f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Veterinarian ID:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="442" y="16" width="110" height="16" uuid="7bf30977-507a-4e17-bc53-7f2a1f152d92"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{VeterinarianID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="120" y="0" width="110" height="30" uuid="a7efb282-5a00-439d-9365-8813613f8c70">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fdb93aef-c5b1-4dda-abcd-e53fd4cf521b"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{m_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="102" height="30" uuid="9a029d4a-e22a-4ce0-b92b-a841c602c1a4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="00e0e27f-a15a-43f8-a887-1b9f718b9ae9"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{m_type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="332" y="0" width="100" height="30" uuid="e3bc7086-9cc5-4d69-894a-cd724b0f1a50">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="952a55ae-b942-49d9-bb2a-aa818a00bbaf"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_10}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="0" width="98" height="30" uuid="1bfb454f-0fb2-4656-b621-5f71c8b99c81">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="39dec0fd-22b3-4167-b219-e27c5784d209"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{m_qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="0" width="100" height="30" uuid="0092e984-8243-42cd-b4e7-66d231ae6987">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d260ba44-dba2-4efa-bcf9-48ccd786af8e"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{COLUMN_8}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="360" y="10" width="50" height="30" uuid="0a25312a-2e02-47bb-8875-d3b35aef5959"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="410" y="10" width="100" height="30" uuid="de95ccde-106f-4c78-b5be-2c2f2bca5a8f"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TotalPrice}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="-3" y="10" width="568" height="60" uuid="424fe937-c844-487a-a245-956432d79de4"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Dashed"/>
+					<leftPen lineWidth="0.5" lineStyle="Dashed"/>
+					<bottomPen lineWidth="0.5" lineStyle="Dashed"/>
+					<rightPen lineWidth="0.5" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[  Thank you for take our Care  !!!]]></text>
+			</staticText>
+			<image>
+				<reportElement x="70" y="15" width="50" height="50" uuid="259bda30-661e-4a2d-a71a-1468ce1142ea"/>
+				<imageExpression><![CDATA["C:/Users/Karl/Downloads/Jasper Reports Image Store/reportImg02.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

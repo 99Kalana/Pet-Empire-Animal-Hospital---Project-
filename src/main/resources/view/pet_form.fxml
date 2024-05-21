@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="758.0" prefWidth="1206.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PetFormController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1206.0">
+         <image>
+            <Image url="@../icons-and-images/defaultBackgroundnew.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="501.0" layoutY="14.0" prefHeight="55.0" prefWidth="205.0" text="Pet Manage" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="604.0" layoutY="69.0" startX="-103.0" stroke="WHITE" strokeWidth="3.0" />
+      <TextField fx:id="txtId" layoutX="25.0" layoutY="123.0" onAction="#txtSearchOnAction" onKeyReleased="#txtPetIDOnKeyReleased" prefHeight="39.0" prefWidth="257.0" promptText="Format 'P001'">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtName" layoutX="306.0" layoutY="123.0" prefHeight="39.0" prefWidth="257.0" />
+      <TextField fx:id="txtBreed" layoutX="594.0" layoutY="123.0" prefHeight="39.0" prefWidth="257.0" />
+      <TextField fx:id="txtWeight" layoutX="892.0" layoutY="123.0" onKeyReleased="#txtPetWeightOnKeyReleased" prefHeight="39.0" prefWidth="257.0" promptText="Format '30.0'">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtColour" layoutX="25.0" layoutY="214.0" prefHeight="39.0" prefWidth="317.0" promptText="E.g. Orange &amp; 2021">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TableView fx:id="tblPet" layoutX="25.0" layoutY="267.0" prefHeight="470.0" prefWidth="887.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="111.0" text="Pet ID" />
+            <TableColumn fx:id="colName" prefWidth="170.0" text="Pet Name" />
+            <TableColumn fx:id="colBreed" minWidth="0.0" prefWidth="242.0" text="Pet Breed " />
+            <TableColumn fx:id="colWeight" minWidth="0.0" prefWidth="144.0" text="Pet Weight (kg)" />
+            <TableColumn fx:id="colColour" prefWidth="219.0" text="Pet Colour and Birthyear" />
+         </columns>
+      </TableView>
+      <JFXButton layoutX="783.0" layoutY="189.0" onAction="#btnUpdateOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #e17055;" text="Update" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="996.0" layoutY="189.0" onAction="#btnDeleteOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #d63031;" text="Delete" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="578.0" layoutY="189.0" onAction="#btnSaveOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #0984e3;" text="Save" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="379.0" layoutY="189.0" onAction="#btnClearOnAction" prefHeight="55.0" prefWidth="186.0" style="-fx-background-color: #00b894;" text="Clear" textFill="#f8f5f5">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="25.0" layoutY="75.0" prefHeight="39.0" prefWidth="145.0" text="Pet ID" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="306.0" layoutY="75.0" prefHeight="39.0" prefWidth="145.0" text="Pet Name" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="594.0" layoutY="75.0" prefHeight="39.0" prefWidth="145.0" text="Pet Breed" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="892.0" layoutY="75.0" prefHeight="39.0" prefWidth="197.0" text="Pet Weight (kg)" textFill="#fffefe">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="170.0" prefHeight="39.0" prefWidth="287.0" text="Pet's Colour &amp; Birthyear" textFill="#fcf8f8">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="392.0" layoutY="202.0">
+         <image>
+            <Image url="@../icons-and-images/clear.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="594.0" layoutY="202.0">
+         <image>
+            <Image url="@../icons-and-images/save.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="792.0" layoutY="202.0">
+         <image>
+            <Image url="@../icons-and-images/update.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="1004.0" layoutY="202.0">
+         <image>
+            <Image url="@../icons-and-images/delete.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="54.0" layoutX="723.0" layoutY="18.0">
+         <image>
+            <Image url="@../icons-and-images/pets3.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="925.0" layoutY="477.0" onAction="#btnPrintReportOnAction" prefHeight="51.0" prefWidth="257.0" style="-fx-background-color: #ffeaa7;" text="         Print Report" textAlignment="RIGHT" textFill="#757272">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView layoutX="956.0" layoutY="483.0">
+         <image>
+            <Image url="@../icons-and-images/printReportIcon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
